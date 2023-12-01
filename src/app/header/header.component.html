@@ -1,7 +1,11 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Menu1</button>
+    <button mat-menu-item>Menu2</button>
+  </mat-menu>
   <span>SaintDex</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
