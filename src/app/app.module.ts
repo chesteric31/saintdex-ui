@@ -7,6 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {HeaderComponent} from "./header/header.component";
 import {SearchComponent} from "./search/search.component";
+import {ListComponent} from "./list/list.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import {SearchComponent} from "./search/search.component";
       registrationStrategy: 'registerWhenStable:30000'
     }),
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    ListComponent
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {
