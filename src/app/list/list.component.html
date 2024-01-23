@@ -1,18 +1,15 @@
 <mat-grid-list [cols]="myBreakpoint" rowHeight="25em">
-
   <mat-grid-tile *ngFor="let armor of dataProviderService.allArmorsSignal()">
-    <mat-card class="saintdex-card">
+    <mat-card class="saintdex-card" [ngClass]="'saintdex-'+armor.category.name.toLowerCase()">
       <mat-card-header>
         <mat-card-title>{{ armor.name }}</mat-card-title>
-        <mat-card-subtitle>{{ armor.category.name }}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image [src]="armor.versions[0].thumb" alt="Photo of an armor">
+      <img mat-card-image [src]="armor.versions[0].thumb" alt="Photo of an armor" style="background-color: white">
       <mat-card-content>
         <p></p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
+        <button mat-button>Details</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

@@ -2,9 +2,11 @@ import {Component, HostListener} from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {DataProviderService} from "../data-provider.service";
-import {NgForOf} from "@angular/common";
+import {NgClass, NgForOf} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @Component({
   selector: 'app-list',
@@ -14,7 +16,10 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatButtonModule,
     NgForOf,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatBadgeModule,
+    MatChipsModule,
+    NgClass
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'

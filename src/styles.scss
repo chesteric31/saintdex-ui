@@ -5,7 +5,7 @@
 
 // Define your theme with color palettes, typography and density
 
-$mat-theme-primary-palette: map-merge(mat.$yellow-palette, ( 501: #ffd700,contrast: (501: #000000,100: black,)));
+$mat-theme-primary-palette: map-merge(mat.$yellow-palette, (501: gold, contrast: (501: #000000, 100: black,)));
 $mat-theme-primary: mat.define-palette(
     $mat-theme-primary-palette,
   $default: 501,
@@ -14,7 +14,7 @@ $mat-theme-primary: mat.define-palette(
   $text: 500
 );
 
-$mat-theme-accent-palette: map-merge(mat.$teal-palette, ( 501: #4d77b6,contrast: (501: white,A100: white,A200: white,)));
+$mat-theme-accent-palette: map-merge(mat.$amber-palette, (501: #ffa000, contrast: (501: white, A100: white, A200: white,)));
 $mat-theme-accent: mat.define-palette(
     $mat-theme-accent-palette,
   $default: 501,
@@ -23,40 +23,13 @@ $mat-theme-accent: mat.define-palette(
   $text: 600
 );
 
-$mat-theme-warn-palette: map-merge(mat.$pink-palette, ( ));
+$mat-theme-warn-palette: map-merge(mat.$red-palette, (501: #ff5252, contrast: (501: white, A100: white, A200: white,)));
 $mat-theme-warn: mat.define-palette(
     $mat-theme-warn-palette,
   $default: A200,
   $lighter: 500,
   $darker: 500,
   $text: A700
-);
-
-$mat-dark-theme-primary-palette: map-merge(mat.$lime-palette, ( contrast: (200: #030844,A100: rgba(0,0,0, 0.87),A700: rgba(0,0,0, 0.87),)));
-$mat-dark-theme-primary: mat.define-palette(
-    $mat-dark-theme-primary-palette,
-  $default: 200,
-  $lighter: A100,
-  $darker: A700,
-  $text: 700
-);
-
-$mat-dark-theme-accent-palette: map-merge(mat.$green-palette, ( contrast: (A200: black,50: black,A400: black,)));
-$mat-dark-theme-accent: mat.define-palette(
-    $mat-dark-theme-accent-palette,
-  $default: A200,
-  $lighter: 50,
-  $darker: A400,
-  $text: A100
-);
-
-$mat-dark-theme-warn-palette: map-merge(mat.$pink-palette, ( contrast: (A100: black,100: white,)));
-$mat-dark-theme-warn: mat.define-palette(
-    $mat-dark-theme-warn-palette,
-  $default: A100,
-  $lighter: 100,
-  $darker: A700,
-  $text: 100
 );
 
 $mat-density: 0;
@@ -75,16 +48,11 @@ $mat-core-theme: mat.define-light-theme((
   density: $mat-density
 ));
 
-$mat-dark-theme: mat.define-dark-theme((
-  color: (
-    primary: $mat-dark-theme-primary,
-    accent: $mat-dark-theme-accent,
-    warn: $mat-dark-theme-warn,
-  )
-));
-
 @include mat.all-component-themes($mat-core-theme);
 
-.dark-theme {
-  @include mat.all-component-colors($mat-dark-theme);
+.max-width {
+  max-width: 100%;
+  width: 100%;
 }
+
+

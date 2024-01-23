@@ -9,6 +9,8 @@ import {HeaderComponent} from "./header/header.component";
 import {SearchComponent} from "./search/search.component";
 import {ListComponent} from "./list/list.component";
 import {HttpClientModule} from "@angular/common/http";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {HttpClientModule} from "@angular/common/http";
     }),
     HeaderComponent,
     SearchComponent,
-    ListComponent
+    ListComponent,
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

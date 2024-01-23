@@ -1,3 +1,7 @@
 <app-header></app-header>
-<app-search></app-search>
+<mat-grid-list [cols]="1" rowHeight="100px">
+  <mat-grid-tile>
+    <app-search class="max-width"></app-search>
+  </mat-grid-tile>
+</mat-grid-list>
 <app-list></app-list>
