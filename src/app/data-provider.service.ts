@@ -22,7 +22,7 @@ export class DataProviderService {
   }
 
   filter(name: string) {
-    this.filteredArmors = signal(this.allArmorsSignal().filter((a: Armor) => a.name.includes(name)));
+    this.filteredArmors = signal(this.allArmorsSignal().filter((a: Armor) => a.name.toLowerCase().includes(name.toLowerCase())));
   }
 
 }
