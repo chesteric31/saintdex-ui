@@ -1,4 +1,4 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {DataProviderService} from "../data-provider.service";
@@ -24,12 +24,12 @@ import {MatBadgeModule} from "@angular/material/badge";
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
+
+  myBreakpoint = 6;
 
   constructor(public dataProviderService: DataProviderService) {
   }
-
-  myBreakpoint = 6;
 
   ngOnInit() {
     this.handleWidth(window.innerWidth);

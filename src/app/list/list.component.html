@@ -1,5 +1,5 @@
 <mat-grid-list [cols]="myBreakpoint" rowHeight="25em">
-  <mat-grid-tile *ngFor="let armor of dataProviderService.allArmorsSignal()">
+  <mat-grid-tile *ngFor="let armor of dataProviderService.filteredArmors()">
     <mat-card class="saintdex-card" [ngClass]="'saintdex-'+armor.category.name.toLowerCase()">
       <mat-card-header>
         <mat-card-title>{{ armor.name }}</mat-card-title>
