@@ -11,7 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
-import {NgForOf, NgIf} from "@angular/common";
+import {NgClass, NgForOf, NgIf} from "@angular/common";
 import {MatIconModule} from "@angular/material/icon";
 
 @Component({
@@ -28,7 +28,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatCardModule,
     NgForOf,
     MatIconModule,
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.scss'
