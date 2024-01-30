@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>{{ detailData.armor.name }}</h1>
+<div mat-dialog-content>
+  {{ detailData.armor.category.name }}
+  <mat-card>
+    <mat-card-content>
+      {{ detailData.armor.versions[selectedIndex].name }}
+      <img mat-card-xl-image [src]="detailData.armor.versions[selectedIndex].image" alt="Image of an armor">
+    </mat-card-content>
+  </mat-card>
+</div>
+<div mat-dialog-actions>
+  <button mat-fab (click)="previous()" [disabled]="selectedIndex==0">
+    <mat-icon>navigate_before</mat-icon>
+  </button>
+  <button mat-fab [mat-dialog-close]="detailData.armor" cdkFocusInitial><mat-icon>close</mat-icon></button>
+  <button mat-fab (click)="next()" [disabled]="selectedIndex==detailData.armor.versions.length-1">
+    <mat-icon>navigate_next</mat-icon>
+  </button>
+</div>

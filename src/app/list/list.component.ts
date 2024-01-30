@@ -7,6 +7,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatBadgeModule} from "@angular/material/badge";
+import {Armor} from "../saint-seiya";
+import {MatDialog} from "@angular/material/dialog";
+import {DetailComponent} from '../detail/detail.component';
 
 @Component({
   selector: 'app-list',
@@ -28,7 +31,8 @@ export class ListComponent implements OnInit {
 
   myBreakpoint = 6;
 
-  constructor(public dataProviderService: DataProviderService) {
+  constructor(public dataProviderService: DataProviderService,
+              private dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -62,5 +66,13 @@ export class ListComponent implements OnInit {
 
   @HostListener('window:resize', ['$event']) onResize(event: any) {
     this.handleWidth(event.target.innerWidth);
+  }
+
+  openDetail(armor: Armor) {
+    this.dialog.open(DetailComponent, {
+      data: {
+        armor: armor
+      }
+    });
   }
 }
