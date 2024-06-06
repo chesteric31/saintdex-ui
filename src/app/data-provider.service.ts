@@ -13,7 +13,7 @@ export class DataProviderService {
   filteredArmors: Signal<Armor[]> = signal([]);
 
   constructor(private httpClient: HttpClient) {
-    const params = new HttpParams().set('scaleHeight', '185').set('scaleWidth', '185');
+    const params = new HttpParams().set('scaleHeight', '200').set('scaleWidth', '200');
     const url = environment.apiUrl + 'v2/armors/';
     this.allArmorsSignal = toSignal(this.httpClient.get<Armor[]>(url, {params}), {initialValue: []});
     this.filteredArmors = computed(() => {
