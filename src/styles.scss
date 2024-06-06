@@ -5,8 +5,8 @@
 
 // Define your theme with color palettes, typography and density
 
-$mat-theme-primary-palette: map-merge(mat.$yellow-palette, (501: gold, contrast: (501: #000000, 100: black,)));
-$mat-theme-primary: mat.define-palette(
+$mat-theme-primary-palette: map-merge(mat.$m2-yellow-palette, (501: gold, contrast: (501: #000000, 100: black,)));
+$mat-theme-primary: mat.m2-define-palette(
     $mat-theme-primary-palette,
   $default: 501,
   $lighter: 100,
@@ -14,8 +14,8 @@ $mat-theme-primary: mat.define-palette(
   $text: 500
 );
 
-$mat-theme-accent-palette: map-merge(mat.$amber-palette, (501: #ffa000, contrast: (501: white, A100: white, A200: white,)));
-$mat-theme-accent: mat.define-palette(
+$mat-theme-accent-palette: map-merge(mat.$m2-amber-palette, (501: #ffa000, contrast: (501: white, A100: white, A200: white,)));
+$mat-theme-accent: mat.m2-define-palette(
     $mat-theme-accent-palette,
   $default: 501,
   $lighter: A100,
@@ -23,8 +23,8 @@ $mat-theme-accent: mat.define-palette(
   $text: 600
 );
 
-$mat-theme-warn-palette: map-merge(mat.$red-palette, (501: #ff5252, contrast: (501: white, A100: white, A200: white,)));
-$mat-theme-warn: mat.define-palette(
+$mat-theme-warn-palette: map-merge(mat.$m2-red-palette, (501: #ff5252, contrast: (501: white, A100: white, A200: white,)));
+$mat-theme-warn: mat.m2-define-palette(
     $mat-theme-warn-palette,
   $default: A200,
   $lighter: 500,
@@ -39,7 +39,7 @@ $mat-density: 0;
 //   $opacity: 0.5
 // );
 
-$mat-core-theme: mat.define-light-theme((
+$mat-core-theme: mat.m2-define-light-theme((
   color: (
     primary: $mat-theme-primary,
     accent: $mat-theme-accent,
