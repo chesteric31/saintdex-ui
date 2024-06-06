@@ -1,5 +1,5 @@
 import {computed, Injectable, Signal, signal} from '@angular/core';
-import {HttpClient, HttpParams} from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import {Armor} from "./saint-seiya";
 import {environment} from "../environments/environment";
 import {toSignal} from "@angular/core/rxjs-interop";

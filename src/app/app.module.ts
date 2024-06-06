@@ -8,9 +8,9 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {HeaderComponent} from "./header/header.component";
 import {SearchComponent} from "./search/search.component";
 import {ListComponent} from "./list/list.component";
-import {HttpClientModule} from "@angular/common/http";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatButtonModule} from "@angular/material/button";
+import {provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import {MatButtonModule} from "@angular/material/button";
     MatGridListModule,
     MatButtonModule
   ],
-  providers: [HttpClientModule],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent]
 })
 export class AppModule {

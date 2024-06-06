@@ -3,7 +3,6 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {DataProviderService} from "../data-provider.service";
 import {NgClass, NgForOf} from "@angular/common";
-import {HttpClientModule} from "@angular/common/http";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatBadgeModule} from "@angular/material/badge";
@@ -18,7 +17,6 @@ import {DetailComponent} from '../detail/detail.component';
     MatCardModule,
     MatButtonModule,
     NgForOf,
-    HttpClientModule,
     MatGridListModule,
     MatBadgeModule,
     MatChipsModule,
